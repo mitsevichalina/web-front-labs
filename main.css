@@ -25,3 +25,26 @@ header {
     font-family: Arial;
     margin: 0px;
 }
+
+a {
+    color: indianred;
+    text-decoration: none;
+}
+
+a:link {
+    color: tan;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: tan;
+}
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active {
+    color: black;
+    opacity: 0.3;
+}
