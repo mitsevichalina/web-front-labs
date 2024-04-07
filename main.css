@@ -9,7 +9,7 @@ main {
     background-color: ivory;
     color: tan;
     font-family: Arial;
-    margin: 0px;
+    margin: 10px 20px 56.5px;
 }
 
 footer {
@@ -17,6 +17,11 @@ footer {
     color: tan;
     font-family: Arial;
     margin: 0px;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 header {
@@ -54,7 +59,7 @@ a:active {
 div.menu {
     border: 7px solid #f4a46080;
     border-radius: 5px;
-    widht: 300px;
+    width: 300px;
     margin: 0 auto;
 }
 
