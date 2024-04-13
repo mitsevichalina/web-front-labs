@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мицевич Алина Александровна. Лабораторная 4</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <style>
+        .comic {
+            position: relative;
+            display: inline-block;
+        }
+        .cloud.first {
+            width: 30px;
+            height: 30px;
+            left: 600px;
+            top: 500px;
+        }
+        .cloud.second {
+            width: 50px;
+            height: 50px;
+            left: 625px;
+            top: 475px;
+        }
+        .cloud.third {
+            width: 70px;
+            height: 70px;
+            left: 650px;
+            top: 450px;
+        }
+        .cloud {
+            position: absolute;
+            background-color: #ffffff;
+            color: #333333;
+            border-radius: 50%;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+        }
+        .cloud.forth {
+            width: 90px;
+            height: 90px;
+            left: 690px;
+            top: 400px;
+            padding: 30px;
+            text-align: center;
+            line-height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .comic:hover .cloud {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 4
+    </header>
+    
+    <main>
+        <div class="comic">
+            <img src="photo.jpg" class="image">
+            <div class="cloud first"></div>
+            <div class="cloud second"></div>
+            <div class="cloud third"></div>
+            <div class="cloud forth">Good news!</div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Алина Мицевич, ФБИ-24, 2 курс, 2024
+    </footer>
+</body>
+</html>
