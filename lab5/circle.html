@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мицевич Алина Александровна. Лабораторная 5</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <script>
+        function Circle1() {
+            const circle = document.querySelector('.one');
+            circle.style.opacity = '0';
+            circle.style.width = '0';
+            circle.style.height = '0';
+        }
+        function Circle2() {
+            const circle = document.querySelector('.two');
+            circle.style.opacity = '0';
+            circle.style.width = '0';
+            circle.style.height = '0';
+        }
+        function Circle3() {
+            const circle = document.querySelector('.three');
+            circle.style.opacity = '0';
+            circle.style.width = '0';
+            circle.style.height = '0';
+        }
+        function Circle4() {
+            const circle = document.querySelector('.four');
+            circle.style.opacity = '0';
+            circle.style.width = '0';
+            circle.style.height = '0';
+        }
+        function Circle5() {
+            const circle = document.querySelector('.five');
+            circle.style.opacity = '0';
+            circle.style.width = '0';
+            circle.style.height = '0';
+        }
+        function Circle6() {
+            const circle = document.querySelector('.six');
+            circle.style.opacity = '0';
+            circle.style.width = '0';
+            circle.style.height = '0';
+        }
+        function Circle7() {
+            const circle = document.querySelector('.seven');
+            circle.style.opacity = '0';
+            circle.style.width = '0';
+            circle.style.height = '0';
+        }
+        function Circle8() {
+            const circle = document.querySelector('.eight');
+            circle.style.opacity = '0';
+            circle.style.width = '0';
+            circle.style.height = '0';
+        }
+        function Circle9() {
+            const circle = document.querySelector('.nine');
+            circle.style.opacity = '0';
+            circle.style.width = '0';
+            circle.style.height = '0';
+        }
+        function Circle10() {
+            const circle = document.querySelector('.ten');
+            circle.style.opacity = '0';
+            circle.style.width = '0';
+            circle.style.height = '0';
+        }
+        function Return() {
+            const circle = document.querySelector('.circle');
+            circle.style.opacity = '1';
+            circle.style.width = '50px';
+            circle.style.height = '50px';
+        }
+    </script>
+</head>
+<style>
+    div {
+        border: 1px solid red;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 18pt;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+    }
+    .one{
+        background-color: red;
+        position: absolute;
+        top: 300px;
+        left: 300px;
+    }
+    .two{
+        background-color: lightcoral;
+        position: absolute;
+        top: 350px;
+        left: 350px;
+    }
+    .three{
+        background-color: yellow;
+        position: absolute;
+        top: 100px;
+        left: 200px;
+    }
+    .four{
+        background-color: lightblue;
+        position: absolute;
+        top: 150px;
+        left: 600px;
+    }
+    .five{
+        background-color: blue;
+        position: absolute;
+        top: 50px;
+        left: 450px;
+    }
+    .six{
+        background-color: maroon;
+        position: absolute;
+        top: 200px;
+        left: 400px;
+    }
+    .seven{
+        background-color: SteelBlue;
+        position: absolute;
+        top: 250px;
+        left: 500px;
+    }
+    .eight{
+        background-color: Thistle;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+    }
+    .nine{
+        background-color: Teal;
+        position: absolute;
+        top: 200px;
+        left: 100px;
+    }
+    .ten{
+        background-color: PaleVioletRed;
+        position: absolute;
+        top: 110px;
+        left: 350px;
+    }
+</style>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+    
+    <main>
+        <div class="one circle" onclick="Circle1()">1</div>
+        <div class="two circle" onclick="Circle2()">2</div>
+        <div class="three circle" onclick="Circle3()">3</div>
+        <div class="four circle" onclick="Circle4()">4</div>
+        <div class="five circle" onclick="Circle5()">5</div>
+        <div class="six circle" onclick="Circle6()">6</div>
+        <div class="seven circle" onclick="Circle7()">7</div>
+        <div class="eight circle" onclick="Circle8()">8</div>
+        <div class="nine circle" onclick="Circle9()">9</div>
+        <div class="ten circle" onclick="Circle10()">10</div>
+        <input type="button" value="Вернуть" onclick="Return()">
+    </main>
+
+    <footer>
+        &copy; Алина Мицевич, ФБИ-24, 2 курс, 2024
+    </footer>
+</body>
+</html>
