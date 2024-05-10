@@ -17,7 +17,15 @@
             padding: 10px;
             text-align: center;
         }
-
+        .help {
+            border: 2px solid brown;
+            border-radius: 10px;
+            width: 500px;
+            margin: 10px auto;
+            padding: 10px;
+            text-align: left;
+            display: none;
+        }
     </style>
     <script>
         let number;
@@ -62,6 +70,20 @@
             count = 0;
             document.getElementById('result').innerHTML = '';
         }
+        function showHelp() {
+            let help = document.getElementById('help');
+            let showButton = document.getElementById('show-help-btn');
+            let hideButton = document.getElementById('hide-help-btn');
+            help.style.display = 'block';
+            showButton.style.display = 'none';
+            hideButton.style.display = 'inline-block';
+        }
+        function hideHelp() {
+        let help = document.getElementById('help');
+        help.style.display = 'none';
+        document.getElementById('hide-help-btn').style.display = 'none';
+        document.getElementById('show-help-btn').style.display = 'inline-block';
+        }
     </script>
 </head>
 <body>
@@ -97,6 +119,23 @@
             <div>
                 <button onclick="again()">Сыграть ещё раз</button>
             </div>
+        </div>
+
+        <div class="help" id="help">
+            <h2>Правила игры:</h2>
+            <ol>
+                <li>Сначала нажмите на кнопку "сыграть в игру"</li>
+                <li>Выберите число от 1 до 100.</li>
+                <li>Нажмите кнопку "Угадать".</li>
+                <li>Если ваше число больше или меньше задуманного, вы увидите соответствующее сообщение</li>
+                <li>Если вы угадали число, поздравляем! Вам будет показано задуманное число и количество попыток.</li>
+                <li>Если захотите ещё раз сыграть, то нажмите на кнопку "сыграть ещё раз"</li>
+            </ol>
+        </div>
+
+        <div class="game">
+            <button id="show-help-btn" onclick="showHelp()">Показать правила игры</button>
+            <button id="hide-help-btn" onclick="hideHelp()" style="display: none;">Скрыть правила игры</button>
         </div>
     </main>
 
