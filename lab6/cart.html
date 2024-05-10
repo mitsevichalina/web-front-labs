@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мицевич Алина Александровна. Лабораторная 6</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <style>
+        .balance {
+            margin-bottom: 20px;
+        }
+        .button {
+            margin-top: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+         function calculateTotal() {
+            let milk = document.getElementById('milk');
+            let bread = document.getElementById('bread');
+            let butter = document.getElementById('butter');
+            let eggs = document.getElementById('eggs');
+            let cheese = document.getElementById('cheese');
+            let sausage = document.getElementById('sausage');
+            let fruits = document.getElementById('fruits');
+
+            let a = parseInt(milk.value);
+            let b = parseInt(bread.value);
+            let c = parseInt(butter.value);
+            let d = parseInt(eggs.value);
+            let e = parseInt(cheese.value);
+            let f = parseInt(sausage.value);
+            let g = parseInt(fruits.value);
+            let sum = a*90 + b*50 + c*150 + d*60 + e*250 + f*200 + g*100;
+            let output = document.getElementById('total');
+            output.innerHTML = 'Общая цена: ' + sum + 'р';
+
+            if (sum > balance.value){
+                document.querySelector('.output').innerHTML = 'У вас недостаточно денег!';
+            }
+            else if (sum == 0){
+                document.querySelector('.output').innerHTML = 'Выберете товар';
+            }
+            document.querySelector('.sum').innerHTML = 'Итого: ' + summa + ' р';
+            }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+    
+    <main>
+        <h1>Корзина товаров</h1>
+    
+        <div class="balance">
+            <label for="balance">Мой баланс:</label>
+            <input type="number" id="balance" name="balance" value="100">
+            <span>руб.</span>
+        </div>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Цена</th>
+                    <th>Количество</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Молоко</td>
+                    <td>90 руб.</td>
+                    <td><input type="number" id="milk" value="2"></td>
+                </tr>
+                <tr>
+                    <td>Хлеб белый</td>
+                    <td>50 руб.</td>
+                    <td><input type="number" id="bread" value="1"></td>
+                </tr>
+                <tr>
+                    <td>Масло, 200 гр</td>
+                    <td>150 руб.</td>
+                    <td><input type="number" id="butter" value="1"></td>
+                </tr>
+                <tr>
+                    <td>Яйца, 10 шт</td>
+                    <td>60 руб.</td>
+                    <td><input type="number" id="eggs" value="2"></td>
+                </tr>
+                <tr>
+                    <td>Сыр, 500 гр</td>
+                    <td>250 руб.</td>
+                    <td><input type="number" id="cheese" value="1"></td>
+                </tr>
+                <tr>
+                    <td>Колбаса, 300 гр</td>
+                    <td>200 руб.</td>
+                    <td><input type="number" id="sausage" value="1"></td>
+                </tr>
+                <tr>
+                    <td>Фрукты</td>
+                    <td>100 руб.</td>
+                    <td><input type="number" id="fruits" value="1"></td>
+                </tr>
+            </tbody>
+            <button>
+                <tr>
+                    <td class="output">Итого:</td>
+                    <td><span id="total"></span> руб.</td>
+                </tr>
+            </button>
+        </table>
+    
+        <button class="button" onclick="calculateTotal()">ОК</button>
+    </main>
+
+    <footer>
+        &copy; Алина Мицевич, ФБИ-24, 2 курс, 2024
+    </footer>
+</body>
+</html>
