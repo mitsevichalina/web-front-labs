@@ -53,6 +53,25 @@
                 main.appendChild(newBlock);
             }
         }
+        function add10_80() {
+            let main = document.querySelector('main');
+            for (let i = 10; i >=-80; i-=3){
+                let newBlock = document.createElement('div');
+                newBlock.style.width = '20px';
+                newBlock.style.height = '20px';
+                newBlock.style.borderRadius = '50%';
+                newBlock.style.backgroundColor = 'red';
+                newBlock.style.color = 'white';
+                newBlock.style.display ='inline-block';
+                newBlock.style.textAlign = 'center';
+                newBlock.style.padding = '10px';
+                newBlock.style.margin = '10px';
+
+                newBlock.innerHTML = `${i}`;
+
+                main.appendChild(newBlock);
+            }
+        }
     </script>
 </head>
 <body>
@@ -65,6 +84,7 @@
         <button onclick="addNewBlock()">Добавить блок</button>
         <button onclick="addNewBlocks()">Добавить блоки</button>
         <button onclick="add20_50()">20 => 50</button>
+        <button onclick="add10_80()">10 => -80</button>
     </main>
 
     <footer>
