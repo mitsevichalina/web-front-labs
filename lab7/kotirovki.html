@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мицевич Алина Александровна. Лабораторная 7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <script>
+        function TGK1(){
+            const price = [
+            0.009688, 0.009692, 0.009834, 0.009846, 0.009822, 0.009888, 0.009934, 0.009752, 0.009770
+            ];
+            const data = [
+            '15.05.2024', '14.05.2024', '13.05.2024', '10.05.2024', '08.05.2024', '07.05.2024', '06.05.2024', '03.05.2024', '02.05.2024'
+            ];
+            let table = document.getElementById('kotirovki-table');
+            for (let i=0; i<price.length; i++){
+                let tr = document.createElement('tr');
+
+                let td1 = document.createElement('td');
+                td1.innerHTML = price[i];
+
+                let td2 = document.createElement('td');
+                td2.innerHTML = data[i];
+
+                let td3 = document.createElement('td');
+                if (i > 0){
+                    let razn = price[i] - price[i-1];
+                    razn = razn.toFixed(1)
+                    td3.innerHTML = razn;
+                }
+                else{
+                    td3.innerHTML = ' - ';
+                }
+                
+                tr.appendChild(td2);
+                tr.appendChild(td1);
+                tr.appendChild(td3);
+                table.appendChild(tr);
+            }
+
+            let sum = 0;
+            for (let i =0; i<price.length; i++){
+                sum+=price[i];
+            }
+
+            let sredn = sum/price.length
+            sredn = sredn.toFixed(2);
+            const min = Math.min.apply(Math, price)
+            const max = Math.max.apply(Math, price)
+
+            document.querySelector('.sredn').innerHTML = 'Среднее значение: ' + sredn;
+            document.querySelector('.min').innerHTML = 'Минимальное значение: ' + min;
+            document.querySelector('.max').innerHTML = 'Максимальное значение: ' + max;
+        }
+    </script>
+    <style>
+        button{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>НГТУ, ФБ, Лабораторная работа 7
+        <hr>
+    </header>
+    
+    <main>
+        <button onclick="TGK1()">Курс акций компании ТГК-1</button>
+        <table border="1" id="kotirovki-table"></table>
+        <p class="sredn"></p>
+        <p class="min"></p>
+        <p class="max"></p>
+    </main>
+
+    <footer>
+        &copy; Алина Мицевич, ФБИ-24, 2 курс, 2024
+    </footer>
+</body>
+</html>
