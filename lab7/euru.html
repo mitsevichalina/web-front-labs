@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мицевич Алина Александровна. Лабораторная 7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <script>
+        function getEuroExchangeRate() {
+            const url = 'https://www.cbr-xml-daily.ru/daily_json.js'
+            fetch (url)
+                .then( function(response){
+                    return response.json();
+                })
+                .then( function(json){
+                    document.querySelector('.price').innerHTML ='Курс Евро за ' + json.Date + ': ' + json.Valute.EUR.Value + ' руб. ';
+                    document.querySelector('.prev').innerHTML = 'Курс Евро за ' + json.PreviousDate + ': ' + json.Valute.EUR.Previous + ' руб. ';
+                    document.querySelector('.razn').innerHTML = 'Разница между текущим значением курса и предыдущим: ' + (json.Valute.EUR.Value - 
+                    json.Valute.EUR.Previous).toFixed(4) + ' руб. ';
+                    if (json.Valute.EUR.Value - json.Valute.EUR.Previous > 0) {
+                        document.querySelector('.text').innerHTML = 'Курс Евро поднялся'
+                    }
+                    else {
+                        document.querySelector('.text').innerHTML = 'Курс Евро опустился'
+                    }
+                })
+        }
+    </script>
+    <style>
+        div{
+            margin: 10px auto;
+            border: 2px solid maroon;
+            background-color: OldLace;
+            padding: 10px;
+            width: 700px;
+            text-align: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>НГТУ, ФБ, Лабораторная работа 7
+        <hr>
+    </header>
+    
+    <main>
+        <button onclick="getEuroExchangeRate()">Получить курс Евро</button>
+        <div>
+            <p class="price"></p>
+            <p class="prev"></p>
+            <p class="razn"></p>
+            <p class="text"></p>
+        </div>
+
+        <a href="https://www.cbr-xml-daily.ru/">Курсы валют, API</a> <br>
+        <a href="https://www.cbr-xml-daily.ru/">API для курсов ЦБ РФ</a> <br>
+        <a href="https://www.cbr-xml-daily.ru/">Виджет курсов валют</a> <br>
+        <a href="https://www.cbr-xml-daily.ru/">Курсы ЦБ РФ в XML и JSON, API</a>
+    </main>
+
+    <footer>
+        &copy; Алина Мицевич, ФБИ-24, 2 курс, 2024
+    </footer>
+</body>
+</html>
