@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мицевич Алина Александровна. Лабораторная 7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <script>
+        const url = 'https://api.open-meteo.com/v1/forecast?latitude=55.0415&longitude=82.9346&hourly=temperature_2m&timezone=Asia%2FBangkok';
+
+        fetch(url)
+        .then( function(response){
+            return response.json();
+        })
+        .then( function(json){
+            console.log(json);
+            document.querySelector('.eight').innerHTML = 'Температура воздуха в 8 часов утра составляет: ' + json.hourly.temperature_2m[8] + ' градусов';
+            document.querySelector('.twelve').innerHTML = 'Температура воздуха в 12 часов дня составляет: ' + json.hourly.temperature_2m[12] + ' градусов';
+            document.querySelector('.twenty').innerHTML = 'Температура воздуха в 8 часов вечера составляет: ' + json.hourly.temperature_2m[20] + ' градусов';
+        })
+    </script>
+    <style>
+        div{
+            margin: 20px auto;
+            border: solid maroon;
+            background-color: PapayaWhip;
+            padding: 10px;
+            width: 550px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>НГТУ, ФБ, Лабораторная работа 7</header>
+
+    <main>
+        <h1 style="text-align: center;">Прогноз погоды в городе Новосибирск</h1>
+
+        <div>
+            <p class="eight"></p>
+            <p class="twelve"></p>
+            <p class="twenty"></p>
+        </div>
+
+    </main>
+
+    <footer>
+        &copy; Алина Мицевич, ФБИ-24, 2 курс, 2024
+    </footer>
+</body>
+</html>
