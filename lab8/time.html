@@ -26,6 +26,21 @@
             color: rgb(112, 33, 33);
             text-align: center;
         }
+        .time{
+            width: 5px;
+            height: 100px;
+            background-color: rgb(112, 33, 33);
+            margin: 0 auto;
+            transform-origin: bottom center;
+            z-index: 1;
+        }
+        img {
+            position: absolute;
+            top: 280px;
+            left: 580px;
+            width: 350px;
+            z-index: -1;
+        }
     </style>
 </head>
 <body onload="showTime()">
@@ -35,7 +50,9 @@
     </header>
     
     <main>
-        <div class="seconds">00</div>
+        <div class="seconds">00:00:00</div>
+        <div class="time" id="second-arrow"></div>
+        <img src="watch.png" alt="">
     </main>
 
     <footer>
