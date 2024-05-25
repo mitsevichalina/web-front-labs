@@ -8,16 +8,29 @@
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="icon" href="../favicon-32x32.png">
     <link rel="icon" href="../favicon-16x16.png">
+    <script src="lab8.js"></script>
+    <style>
+        div {
+            color: brown;
+            padding: 2px;
+            font-size: 15px;
+        }
+    </style>
 </head>
-<body>
-    <header>НГТУ, ФБ, Лабораторная работа 8</header>
+<body onload="showDate()">
+    <header>
+        НГТУ, ФБ, Лабораторная работа 8
+    </header>
     
     <main>
-        <ol>
-            <li>
-                <a href="date.html"; style="text-decoration: none;">Дата</a>
-            </li>
-        </ol>
+        <div id="current-date">
+            <div class="date1"></div>
+            <div class="date2"></div>
+            <div class="date3"></div>
+            <div class="date4"></div>
+            <div class="date5"></div>
+            <div class="date6"></div>
+        </div>
     </main>
 
     <footer>
