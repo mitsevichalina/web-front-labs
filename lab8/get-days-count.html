@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мицевич Алина Александровна. Лабораторная 8</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <script src="get-days-count.js"></script>
+    <style>
+        .input-container,
+        .button-container {
+            margin-bottom: 15px;
+        }
+        .result {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 8
+    </header>
+    
+    <main>
+        <div class="input-container">
+            <label>Дата рождения: <input type="date"></label>
+        </div>
+        <div class="button-container">
+            <button onclick="showDaysCount()">Показать число дней</button>
+            <button onclick="clearFields()">Очистить</button>
+        </div>
+        <div id="result" class="result"></div>
+    </main>
+
+    <footer>
+        &copy; Алина Мицевич, ФБИ-24, 2 курс, 2024
+    </footer>
+</body>
+</html>
