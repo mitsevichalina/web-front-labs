@@ -27,3 +27,17 @@ function showDate() {
     const WeekD = ['Воскресенье', 'Понедельник','Вторник','Среда','Четверг','Пятница','Суббота']
     week.innerHTML = 'День недели: ' + WeekD[nowWeek];
 }
+
+function WeekFun() {
+    const day = document.querySelector('.d').value;
+    const month = document.querySelector('.m').value;
+    const year = document.querySelector('.y').value;
+
+    const date = new Date(year, month - 1, day);
+
+    const daysOfWeek = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+
+    const dayOfWeek = daysOfWeek[date.getDay()];
+
+    document.querySelector('.out').innerText = `День недели ${dayOfWeek}`;
+}
